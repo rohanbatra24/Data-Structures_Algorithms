@@ -80,6 +80,12 @@ class LinkedList {
 		newNode.next = holdingPointerTo;
 	}
 
+	remove(index) {
+		const leader = this.traverseToIndex(index - 1);
+		leader.next = leader.next.next;
+		this.length--;
+	}
+
 	traverseToIndex(index) {
 		let currentNode = this.head;
 		let counter = 0;
@@ -97,7 +103,8 @@ MyLinkedList.append(5);
 MyLinkedList.append(16);
 MyLinkedList.prepend(18);
 MyLinkedList.insert(1, 68);
-MyLinkedList.insert(3, 6338);
+console.log(MyLinkedList.printList());
 
-MyLinkedList.printList();
-console.log('MyLinkedList.printList()', MyLinkedList.printList());
+MyLinkedList.remove(4);
+
+console.log(MyLinkedList.printList());
