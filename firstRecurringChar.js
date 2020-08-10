@@ -19,7 +19,8 @@ function firstRecurringCharacter(input) {
 	}
 }
 
-function firstRecurringCharacter(input) {
+function firstRecurringCharacter2(input) {
+	// faster because of hashtable lookup O(n)
 	const obj = {};
 
 	for (let num of input) {
