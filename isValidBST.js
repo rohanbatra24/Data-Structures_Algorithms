@@ -1,4 +1,4 @@
-// check if it is a valid BST
+// check if it is a valid Binary Search Tree
 
 function isValidBST(root, min, max) {
 	if (!root) {
